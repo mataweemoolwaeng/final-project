@@ -72,6 +72,7 @@ const getItemByCategoryID = async (req, res) => {
   const { id } = req.params;
   // console.log("id = " + id);
   try {
+    
     const Item = await Items.findAll({
       where: { categoryCateId: id },
       include: itemInclude,
